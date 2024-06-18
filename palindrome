@@ -1,0 +1,13 @@
+def is_palindrome(string):
+    # Remove non-alphanumeric characters
+    string = ''.join(e for e in string if e.isalnum())
+    
+    # Convert to lowercase
+    string = string.lower()
+    
+    # Compare to reverse
+    return string == string[::-1]
+
+# Test the function
+print(is_palindrome("racecar"))  # True
+print(is_palindrome("hello"))    # False
