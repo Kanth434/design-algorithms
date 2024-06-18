@@ -1,0 +1,11 @@
+def generate_fibonacci_series(limit):
+    a, b = 0, 1
+    fibonacci_series = []
+    while a < limit:
+        fibonacci_series.append(a)
+        a, b = b, a + b
+    return fibonacci_series
+
+# Generate Fibonacci series up to 100
+fibonacci_series = generate_fibonacci_series(100)
+print(fibonacci_series)
