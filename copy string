@@ -1,0 +1,3 @@
+original_string = "Hello, World!"
+copied_string = original_string[:]
+print(copied_string)  # Output: Hello, World!
