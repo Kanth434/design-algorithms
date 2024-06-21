@@ -1,0 +1,17 @@
+from collections import Counter
+
+def find_intersection(n1, n2):
+    count_n1 = Counter(n1)
+    count_n2 = Counter(n2)
+    
+    result = []
+    for num in (count_n1 & count_n2).elements():
+        result.extend([num] * min(count_n1[num], count_n2[num]))
+    
+    return result
+
+# Example usage
+n1 = [1, 2, 2, 1]
+n2 = [2, 2]
+intersection = find_intersection(n1, n2)
+print(intersection)
