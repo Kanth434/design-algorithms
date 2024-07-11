@@ -1,0 +1,16 @@
+def find_duplicates(nums):
+    duplicates = set()
+    unique_nums = set()
+
+    for num in nums:
+        if num in unique_nums:
+            duplicates.add(num)
+        else:
+            unique_nums.add(num)
+
+    return list(duplicates)
+
+# Test the function
+numbers = [1, 2, 3, 4, 5, 2, 7, 8, 3]
+duplicate_numbers = find_duplicates(numbers)
+print("Duplicate numbers in the list:", duplicate_numbers)
