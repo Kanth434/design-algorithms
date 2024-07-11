@@ -1,0 +1,16 @@
+def count_distinct_subarrays(arr):
+    n = len(arr)
+    distinct_count = 0
+    for i in range(n):
+        distinct_elements = set()
+        for j in range(i, n):
+            if arr[j] in distinct_elements:
+                break
+            distinct_elements.add(arr[j])
+            distinct_count += 1
+    return distinct_count
+
+# Example Usage
+arr = [1, 2, 1, 2, 3]
+result = count_distinct_subarrays(arr)
+print(result)
