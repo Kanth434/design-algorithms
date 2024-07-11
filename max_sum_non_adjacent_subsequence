@@ -1,0 +1,14 @@
+def max_sum_non_adjacent_subsequence(arr):
+    incl = 0
+    excl = 0
+    
+    for i in arr:
+        new_excl = max(incl, excl)
+        incl = excl + i
+        excl = new_excl
+        
+    return max(incl, excl)
+
+# Example Usage
+arr = [3, 2, 7, 10]
+print(max_sum_non_adjacent_subsequence(arr))
